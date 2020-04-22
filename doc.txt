@@ -1,0 +1,46 @@
+1st approch: did the translation without an ext lib
+pour faire l'internationaalisation de site en utilsant nextjs on a beosin de ces feature :
+- locale subpaths
+    => the idea is to add a prefix for all routes, this prefix mean the language to detecte it(eg: /fr/some-routes)
+    we use the dynamic routing of nextjs or an ext lib like next-routes?
+- client and server rendered
+    => the idea to find the best way to set the internationalisation fir the ssr/csr.
+- seo friendly
+    => mabye we need to make the seo based to languaged
+- auto language detection
+ => detection at the csr (need more documutation if we can do it at the ssr)
+- ssr (pas vraimentbesoin d'un custom server)
+- simple automatic language detection
+- ability to save/restore user language preferences
+ => should set the language at the local storage for exemple
+- translations
+ => what we need to do:
+    * withLocale HOC
+    * useTranslation hook
+    * Locale Context
+    * a LocalSwitcher (a select to change the language if needed)
+
+
+other thinks to document it: 
+- string interpolation in translation
+- the auto localization of time/date format
+- separation of translation files from the code app :/
+
+!!! really not a viable approch because need more work !!!
+
+2nd approch: use an ext lib if it's good for our needs
+in progress: make a git repo for this work to test and experiment a lib
+
+
+
+NB: documentaton en cours sur des approches.
+
+-> peut être on va utiliser ce lib `next-i18next`  pour mettre en place ce traduction (features) si elle nous serve bien.
+
+
+
+
+very impotant question 
+
+how to translate the data returned by queries and mutations to displayed at the front side?
+exist sothing to automate this ?
