@@ -1,14 +1,16 @@
-import NextI18Next from 'next-i18next'
+const NextI18Next = require('next-i18next').default
+const { localeSubpaths } = require('next/config').default().publicRuntimeConfig
 
-const NextI18NextInstance = new NextI18Next({
-  defaultLanguage: 'en',
-  otherLanguages: ['de']
-})
-
-export default NextI18NextInstance
-
-/* Optionally, export class methods as named exports */
-export const {
-  appWithTranslation,
-  withTranslation,
-} = NextI18NextInstance
+module.exports = new NextI18Next({
+  defaultLanguage: 'fr',
+  otherLanguages: ['en'],
+  localeSubpaths: {
+    fr: 'fr',
+    en: 'en',
+  },
+  detection: {
+    lookupCookie: 'next-i18next',
+    order: ['cookie', 'querystring', 'localStorage', 'path', 'subdomain'],
+    caches: ['cookie'],
+  },
+});

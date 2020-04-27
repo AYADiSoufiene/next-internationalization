@@ -1,16 +1,22 @@
 {
   "name": "next-trad",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
   },
+  "scripts": {
+    "dev": "node index.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node index.js"
+  },
+  "devDependencies": {},
   "dependencies": {
-    "next": "9.3.5",
+    "express": "^4.16.4",
+    "i18next": "^14.0.1",
+    "next": "^9.3.5",
     "next-i18next": "^4.3.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
