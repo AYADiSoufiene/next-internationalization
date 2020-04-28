@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Router } from '../i18n'
 
 import { i18n, Link, withTranslation } from '../i18n'
 
@@ -12,13 +13,19 @@ const Homepage = ({ t }) => (
       >
         {t('change-locale')}
       </button>
+      <button
+        type='button'
+        onClick={() => Router.push('/about')}
+      >
+        {t('link1')}
+      </button>
       {t('h1')}
     </main>
   </React.Fragment>
 )
 
 Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
+  namespacesRequired: ['common', 'about'],
 })
 
 Homepage.propTypes = {
