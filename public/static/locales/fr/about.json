@@ -1,4 +1,5 @@
 {
-	"h1": "about fr",
-	"link2": "vers le home"
+	"h1": "à propos",
+	"toHomePage": "vers le home",
+	"homeLink": "/"
 }

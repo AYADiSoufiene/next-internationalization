@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Router } from '../i18n'
 
-import { i18n, Link, withTranslation } from '../i18n'
+import { Router, Link, withTranslation } from '../i18n'
 
 const About = ({ t }) => (
   <React.Fragment>
     <main>
-      <button
-        type='button'
-        onClick={() => Router.push('/')}
-      >
-        {t('link2')}
-      </button>
-      {t('h1')}
+      <Link as={`${t('homeLink')}`} href="/">
+        <button
+          type='button'
+        >
+          {t('toHomePage')}
+        </button>
+      </Link>
+      <div>{t('h1')}</div>
     </main>
   </React.Fragment>
 )

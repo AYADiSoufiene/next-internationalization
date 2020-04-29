@@ -1,8 +1,9 @@
 {
-    "h1": "A simple example fr",
-    "change-locale": "Change locale fr ",
-    "to-second-page": "To second page fr",
-    "error-with-status": "A {{statusCode}} error occurred on server fr",
-    "error-without-status": "An error occurred on the server fr",
-    "link1": "vers la page about"
+    "h1": "Un simple exemple",
+    "change-locale": "Changer la locale",
+    "to-second-page": "Vers la page à propos",
+    "error-with-status": "Une erreur {{statusCode}} s'est produite sur le serveur",
+    "error-without-status": "Une erreur s'est produite sur le serveur",
+    "toAboutPage": "Vers la page about",
+    "aboutLink": "/a-propos"
   }

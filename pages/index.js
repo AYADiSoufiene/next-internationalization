@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Router } from '../i18n'
 
 import { i18n, Link, withTranslation } from '../i18n'
 
@@ -13,13 +12,14 @@ const Homepage = ({ t }) => (
       >
         {t('change-locale')}
       </button>
-      <button
-        type='button'
-        onClick={() => Router.push('/about')}
-      >
-        {t('link1')}
-      </button>
-      {t('h1')}
+      <Link as={`${t('aboutLink')}`} href="/about">
+        <button
+          type='button'
+        >
+          {t('toAboutPage')}
+        </button>
+      </Link>
+      <div>{t('h1')}</div>
     </main>
   </React.Fragment>
 )

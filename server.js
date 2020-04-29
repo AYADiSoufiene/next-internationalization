@@ -19,6 +19,12 @@ app.prepare().then(() => {
       res.send('OK');
     })
     .use(nextI18NextMiddleware(nextI18next))
+    // need this RegEx for custom route with diffrent language (because when refrech an error 404 occured)
+    /* declare custom regex routes for the diffirent routes as the language selected */
+    .get('/:type(a-propos|about-us)', (req, res) => {
+      const { query, params } = req
+      return app.render(req, res, '/about', { ...query, ...params})
+    })
     .get('*', (req, res) => handle(req, res))
     .listen(PORT, err => {
       if (err) throw err;
