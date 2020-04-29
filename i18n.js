@@ -1,5 +1,6 @@
-const NextI18Next = require('next-i18next').default
-const { localeSubpaths } = require('next/config').default().publicRuntimeConfig
+const NextI18Next = require('next-i18next').default;
+// eslint-disable-next-line no-unused-vars
+const { localeSubpaths } = require('next/config').default().publicRuntimeConfig;
 
 module.exports = new NextI18Next({
   defaultLanguage: 'fr',

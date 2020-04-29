@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { withTranslation } from '../i18n'
+import { withTranslation } from '../i18n';
 
 const Error = ({ statusCode, t }) => (
   <p>
@@ -9,29 +9,28 @@ const Error = ({ statusCode, t }) => (
       ? t('error-with-status', { statusCode })
       : t('error-without-status')}
   </p>
-)
+);
 
 Error.getInitialProps = async ({ res, err }) => {
-  let statusCode = null
+  let statusCode = null;
   if (res) {
-    ({ statusCode } = res)
+    ({ statusCode } = res);
   } else if (err) {
-    ({ statusCode } = err)
+    ({ statusCode } = err);
   }
-  console.log('statusCode', statusCode)
   return {
     namespacesRequired: ['common'],
     statusCode,
-  }
-}
+  };
+};
 
 Error.defaultProps = {
   statusCode: null,
-}
+};
 
 Error.propTypes = {
   statusCode: PropTypes.number,
   t: PropTypes.func.isRequired,
-}
+};
 
-export default withTranslation('common')(Error)
+export default withTranslation('common')(Error);

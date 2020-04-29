@@ -15,8 +15,8 @@ module.exports = {
     config.entry = async () => {
       const entries = await originalEntry();
       if (
-        entries['main.js'] &&
-        !entries['main.js'].includes(path.join(__dirname, 'utils/polyfills.js'))
+        entries['main.js']
+        && !entries['main.js'].includes(path.join(__dirname, 'utils/polyfills.js'))
       ) {
         entries['main.js'].unshift(path.join(__dirname, 'utils/polyfills.js'));
       }
@@ -28,5 +28,5 @@ module.exports = {
 
     return config;
   },
-  
+
 };
